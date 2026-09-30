@@ -1,0 +1,470 @@
+@Proceedings{ECAF-2026,
+    booktitle = {Proceedings of Fifth European Conference on Algorithmic Fairness},
+    name = {European Conference on Algorithmic Fairness},
+    shortname = {ECAF},
+    sections = {Preface|Full Papers|Extended Abstracts},
+    editor = {De Bie, Tijl and Defrance, MaryBeth and Calders, Toon and Nguyen, Dennis},
+    volume = {350},
+    year = {2026},
+    start = {2026-09-02},
+    end = {2026-09-04},
+    conference_url = {https://2026.ecafconference.org/},
+    address = {Ghent University, Ghent, Belgium},
+    conference_number ={5}
+}
+
+@InProceedings{preface,
+    title = {Fifth European Conference on Algorithmic Fairness (ECAF'26)},
+    author = {De Bie, Tijl and Defrance, MaryBeth and Calders, Toon and Nguyen, Dennis},
+	pages = {1-7},
+    abstract = {The European Conference on Algorithmic Fairness (ECAF) aims to foster dialogue between researchers working on algorithmic fairness in the context of Europe's legal and societal framework, especially in light of the European Union's attempts to promote ethical AI and the turn to AI for the common good. ECAF welcomes submissions from multiple disciplines, including but not limited to computer science, law, philosophy, and social science, as well as interdisciplinary and transdisciplinary work. The fifth edition (ECAF'26) will provide a dedicated venue for interdisciplinary discourse on algorithmic fairness via keynotes, paper presentations, a panel discussion, and interactive sessions.},
+section = {Preface}
+}
+
+@InProceedings{sikder26,
+	title = {FairCert: Certifiable Error Rate Fairness for ML and LLM Decision Systems},
+	pages = {8-23},
+	author = {Sikder, Fahim},
+	openreview = {oZry4lgu1B},
+	abstract = {A small FPR gap on one test set does not certify a classifier as fair.
+A point estimate has no confidence bound, so the observed gap may just be sampling noise.
+The issue is worst on intersectional subgroups, where number of samples in per-group are small.
+Researchers today have two options, and neither is adequate.
+They can report raw gaps with no statistical guarantee, or use existing methods that need white-box access and cover only individual fairness or single attributes.
+We present \emph{FairCert}, a black-box auditing framework that produces finite-sample certificates on false positive rate (FPR) and true positive rate (TPR) gaps.
+It supports binary and multi-class classifiers.
+The main certificate uses Clopper-Pearson exact intervals with a Bonferroni correction across $K$ intersectional groups.
+Beside certification, we also add two supplementary tools.
+A permutation test shuffles group labels among the true negatives and recomputes the gap.
+Restricting to negatives, keeps Type I error valid when base rates differ across groups.
+And a bootstrap diagnostic serves as an exploratory alternative.
+We test FairCert on eight datasets covering finance, criminal justice, and vision.
+The evaluation covers ML classifiers, seven open-source LLMs from 3B to 30B parameters, and image models.
+Our experiments show that LLM fairness is domain dependent. 
+Mistral-24B has an FPR gap of $0.259$ on COMPAS but only $0.009$ on ACS~Income.
+Evaluating one attribute at a time hides intersectional gaps.
+On Credit Default dataset, certification passes at single sensitive attribute but fails at intersectional settings.},
+	section = {Full paper},
+}
+@InProceedings{sanchez-karhunen26,
+	title = {Toward a Geometric Perspective on Trustworthy AI: Diagnostic Signatures for High-Stakes NLU},
+	pages = {24-39},
+	author = {Sanchez-Karhunen, Eduardo and Quesada, Jose F and Guti\'errez-Naranjo, Miguel A.},
+	openreview = {pEcMgarzJU},
+	abstract = {The deployment of Natural Language Understanding (NLU) systems in high-risk sectors such as clinical triage, emergency
+response, and financial eligibility, is now governed by the transparency and accountability mandates of the European AI Act.
+Despite these legal obligations, a significant "Accountability Gap" persists: regulators demand documentation of a system's
+"general logic", while the deep learning models powering these systems remain structurally opaque. While existing Explainable
+AI (XAI) methods provide post-hoc, model-agnostic approximations, they often describe where a model attended rather than
+how it computed its decision, a distinction that is increasingly consequential in high-stakes settings. This paper proposes that
+the Geometric Framework for Intent Detection offers a complementary analytical lens for addressing these challenges. By
+interpreting semantic resolution as a dynamical trajectory through a hidden state manifold converging toward stable attractor
+basins, this framework makes visible certain structural properties of the model's computation that are currently invisible
+to behavioral audits. We argue that this geometric perspective opens a set of promising research directions for each of the
+five pillars of Trustworthy AI: Transparency, Technical Robustness, Fairness, Human Oversight, and Societal Well-being.
+Specifically, it suggests candidate diagnostic signatures for failures such as algorithmic bias, adversarial vulnerability, out-ofscope
+instability, and multilingual degradation. We present this framework as a conceptual toolbox and a research roadmap
+intended to complement existing auditing practices and contribute toward the goal of verifiable, mechanistically grounded NLU.},
+	section = {Full paper},
+}
+@InProceedings{boratto26,
+	title = {From Relevance to Reward: A Pipeline View of Addictive Design in Recommender Systems under the DSA},
+	pages = {40-44},
+	author = {Boratto, Ludovico and De Conca, Silvia and Fabbri, Matteo and Fabris, Alessandro},
+	openreview = {73Vivvesqq},
+	abstract = {Recent EU Commission proceedings against TikTok, Meta, Shein, and Temu have framed addictive design as a systemic risk under the Digital Services Act, yet the connection to recommender systems remains underexplored. This contribution proposes a four-stage analytical framework centered on relevance estimation, session sequencing, objective configuration, and interface and notifications, mapping where addictive effects emerge in the recsys pipeline and how they can be audited. Drawing on the 2025 DSA audit and systemic risk assessment reports of six VLOPs, we identify gaps in current transparency practices, including no disclosure of optimisation objectives and impact-relevant metrics, and derive recommendations for DSA enforcement.},
+	section = {Extended abstract},
+}
+@InProceedings{kestel26,
+	title = {Counterfactual Latent Representations: A Neurosymbolic Approach},
+	pages = {45-50},
+	author = {Kestel, Leonhard and Kern, Christoph},
+	openreview = {kXgxgHHIO4},
+	abstract = {Counterfactual fairness, i.e., asking how a prediction would change under interventions on sensitive attributes, is hard to opera-
+tionalize for unstructured inputs such as text. We propose a modular neurosymbolic framework that decouples representation
+learning from causal intervention: a pretrained encoder maps text to a latent representation, a semantic decoder grounds part of
+this space in a structured causal subgraph, and a neural manipulator learns to transform the latent representation analogously
+to a symbolic counterfactual operation on the decoded features, trained under a consistency constraint between the two. The
+approach localizes causal assumptions in an explicit subgraph, trading end-to-end optimization for auditability.},
+	section = {Extended abstract},
+}
+@InProceedings{anaya-quesada26,
+	title = {Sequential Hypothesis Testing for Black-Box Fairness Audits},
+	pages = {51-66},
+	author = {Anaya-Quesada, Mart\'in and Kountouris, Marios},
+	openreview = {qs0JLOLTUS},
+	abstract = {Audits of deployed AI systems often have to decide whether a system violates a behavioral requirement before the auditor can assemble a large, fixed test set. This paper develops a sequential testing framework for black-box fairness auditing. We formalize an audit as a pre-specified hypothesis test on a disparity functional and instantiate the procedure with Wald's Sequential Probability Ratio Test (SPRT). The framework separates three choices that are often conflated in fairness evaluations: the fairness construct to be audited, the tolerance threshold that makes a disparity practically or legally material, and the statistical risks that the auditor is willing to incur. We evaluate the approach in two studies. In controlled simulations, sequential audits detect violations of statistical parity, equal opportunity, and equalized odds while, under the studied designs, typically using fewer samples than fixed-sample two-proportion tests. In a German Credit case study, the same protocol detects persistent disparities in a baseline classifier and in a classifier trained without the sensitive attribute, while producing substantially fewer bias flags after demographic-parity constrained training. The results show that sequential tests can make fairness audits more sample-efficient, but also that nominal error guarantees require careful pre-registration, treatment of composite hypotheses, multiple-testing correction, and validation under the actual sampling protocol. We further stress-test the procedure on a fair equalized-odds model and derive reporting recommendations for finite-budget audits.},
+	section = {Full paper},
+}
+@InProceedings{brandner26,
+	title = {Understanding Fairness in AI Business Applications: A Case Study on AI Job Interviewing Platforms},
+	pages = {67-73},
+	author = {Brandner, Lou Therese and Koeritz, Lisa},
+	openreview = {Y4lKgfAXXp},
+	abstract = {AI-based job interviewing platforms have proliferated in corporate recruitment, marketed not only as efficient alternatives
+to traditional hiring but as a fairer option: less prone to biases attributed to human decision-makers. Yet these systems have
+simultaneously drawn criticism for inaccuracy and discriminatory outcomes. This mixed-method study examines how companies
+offering AI-based interviewing tools communicate their commitment to fairness in public-facing materials, investigating how
+fairness is framed and its relationship to established Ai ethics operationalisations. Qualitative analysis identifies 3 dominant
+communicative strategies, each marked by conceptual shortcomings that risk misleading clients and applicants about the
+genuine equity of these systems. Complementary quantitative analysis reveals that fairness language is densely and strategically
+concentrated, consistently positive in sentiment, and anchored to a narrow set of recurring discursive patterns. Together, these
+findings indicate that the AI hiring industry has developed a relatively coherent fairness vocabulary that serves primarily to
+legitimate commercial products rather than to substantively address the structural challenges of algorithmic discrimination. We
+conclude that the conceptual integrity of AI fairness must be safeguarded, so that the term retains its critical, normative force
+rather than being reduced to a rhetorical device.},
+	section = {Extended abstract},
+}
+@InProceedings{rocha26,
+	title = {Techno-judges on the spot: explorations of the impact of AI advancements in Brazil's Justice System},
+	pages = {74-76},
+	author = {Rocha, Mateus Henrique Amorim Moura},
+	openreview = {vvwYhDsVuf},
+	abstract = {This paper aims to analyse the effects of the implementation of AI decision-making tools in Brazil's Justice System, focusing on judge's work in two main courts in S\~ao Paulo, the State Court of S\~ao Paulo (TJSP) and the Federal Court of the Third Region (TRF3R). Considering the overall rise in AI adoption in public services, regardless of the area, stands the fact that there's an enormous heterogeneity in all categories of AI use and application, as well as heterogeneities in the implementation process, the choice and development of such algorithmic models (Ribeiro & Segatto, 2025). These models and tools are usually developed and driven by the bureaucracy's limited capabilities or through contracts of licenses, LLMs and other cloud-based services provided by Big Tech companies. AI tools may strengthen administrative capabilities and promote social inclusion in public policies (Andersson et al., 2022; Kerssens & Van Dijck, 2021), but there's usually ethical and structural challenges, as well as multiple risks, such as algorithmic biases being made and reproduced through data and the probability of bureaucrats' discernment being drastically reduced, which could entail in amplifying inequalities and compromising general public's access to public services (Boer & Raaphorst, 2023; Bovens & Zouridis, 2002; Selten et al., 2023). Regarding Justice Systems, judges tend to use AI tools to accelerate the decision-making process, with the goal of reaching higher productivity metrics (CNJ, 2025; Kolkman et al., 2024), especially in Brazil's case where the whole Justice System is over-loaded in number of pending cases, accounting a backlog of over 80 million. Thus, AI appears to these institutions and courts as a miraculous tool that will fix most, if not all, of their problems regarding speed, efficiency and productivity in the decision-making process. However, most of the literature regarding this theme focuses on the Global North. As such, the analysis of Brazil's case fills an important gap in this discussion, by taking a look at different organizational contexts, which show a broader picture of public institutions' capabilities and fragilities, especially regarding Justice Systems, since these differences play a main role in affecting the bureaucracies' work (Nieto-Morales et al., 2024). In addition to this, this paper tackles another fundamental gap in the literature, of which there's very few works taking a qualitative approach in social sciences to evaluating the impacts and perceptions of the users of these tools, specifically works that delve in bureaucrats, public servants and judges' day to day work (Selten et al., 2023; Kapoor et al., 2024). We aim to contribute to this debate by evaluating the degree and the type of transformations perceived in judges' position and function, as well as in jurisdictional work. We choose a period of five years, from 2020 to 2025, which proves to be a very important and transitional period for Brazilian Courts' digital transformation. Thus, firstly we have drawn out some questions regarding the adoption of AI in public services, the digital transformation of Justice Systems and also questions on human-machine interaction. We also contextualize the current scenario of Brazilian Courts' technological developments, by means of official documents published by the National Council of Justice (CNJ, 2025). As for our methodology, we relied on documents analysis (Cellard, 2012) and also in-depth interviews (Barbot, 2015), from which we gathered data on perceptions, practices and overall changes felt and reported by judges. The thematic analysis of those interviews revealed evidence that AI tools have been frequently used by the judiciary on a day to day basis, including informal uses of Chatbots and Gen AI services, mainly to support decision-making. Results also point to a high probability of over-reliance on these tools' results by these judges, who expressed concerns regarding faults in AI but declared that they didn't have enough training to comprehend or deal with such tools and their errors. As a byproduct of this paper, we find that a fairly clear scenario can be described: the AI implementation race by public services in Brazil has been excessively rushed and lacks critical thinking regarding when, why and how to adopt these tools. As such, we believe that these results may impact the development of better governance models for public sectors taken by digitalization and modernization processes (Mergel et al., 2023).},
+	section = {Extended abstract},
+}
+@InProceedings{lindermayr26,
+	title = {Bridging Formal and Perceived Fairness: Development of an Interdisciplinary Framework in Algorithmic Decision-Making},
+	pages = {77-83},
+	author = {Lindermayr, Maike and Cerrato, Mattia and H\"ubner, Luisa and Kraus, Johannes Maria},
+	openreview = {WcdqLYewCN},
+	abstract = {While fairness has become a central concern in research on algorithmic systems, the field remains predominantly shaped by Computer 
+Science, resulting in a strong emphasis on formal fairness metrics and bias mitigation strategies. Nevertheless, this focus may obscure 
+a fundamental challenge: fairness is not merely a technical property, but a subjective, context-sensitive human judgment shaped by 
+cognitive heuristics, mental models, normative expectations, and sociotechnical factors. Crucially, users' perceptions of fairness may 
+diverge substantially from the fairness criteria an algorithm formally satisfies; a system may meet predefined technical fairness 
+requirements yet still be perceived as unjust by decision-affected stakeholders. In such cases, the system fails on a fundamental 
+dimension: it will not be trusted, accepted, or considered legitimate. Taking a user-centered design perspective, this paper presents a 
+work-in-progress conceptual framework that bridges Computer Science approaches to formal algorithmic fairness with normative and 
+Social Science fairness approaches regarding perceived fairness, trust, and technology acceptance, embedding both within the 
+sociotechnical conditions that shape human judgment. Through (1) theoretical literature synthesis, (2) interdisciplinary workshops, 
+and (3) stakeholder interviews, the project aims to inform evaluation approaches that integrate computational fairness audits with 
+user-centered assessments and guide the design of fairness-aware, human-centered algorithmic systems that support informed, well-
+calibrated fairness judgments by those affected.},
+	section = {Extended abstract},
+}
+@InProceedings{lammers26,
+	title = {Fairness in the Flow: An Overview and Drift-Aware Evaluation of Fair Classifiers for Drifting Data Streams},
+	pages = {84-100},
+	author = {Lammers, Kathrin and Defrance, MaryBeth and Hammer, Barbara and Vaquet, Valerie},
+	openreview = {CMqgVQGnGa},
+	abstract = {Machine learning systems increasingly inform high-stakes decisions, making fairness, transparency, and reliability essential. While algorithmic fairness has been widely studied in the traditional batch setting, its extension to stream learning, where data arrives continuously, and distributions may evolve, remains underexplored. This paper surveys and systematizes the emerging field of fair stream learning, highlighting challenges such as fairness--performance trade-offs, temporal dynamics, and class imbalance. We provide a comprehensive overview of existing fair stream learning methods and propose a drift-aware evaluation framework. Our empirical analyses, for the first time, comprehensively utilize both drift-aware and cumulative score aggregation on streams with controlled and fairness-relevant drift. We compare representative approaches, offer insights into their behavior under evolving data conditions, and identify directions for future research.},
+	section = {Full paper},
+}
+@InProceedings{koeritz26,
+	title = {Fairness Without Reflection? An Empirical Analysis of AI Ethics Tools in the Age of GenAI},
+	pages = {101-106},
+	author = {Koeritz, Lisa and Pfisterer, Sonja and Hirsbrunner, Simon David},
+	openreview = {m1Ygza7Jx8},
+	abstract = {AI ethics tools designed to operationalise fairness are increasingly insufficient for the challenges posed by generative AI (GenAI). Based on a content analysis of 30 digital AI ethics tools, we find that tools function primarily as compliance artifacts rather than as epistemic devices supporting ethical judgment under change. Technical tools frame fairness as a computational problem inapplicable to GenAI, while governance-oriented tools reduce it to documentation and risk management. We argue that fairness in GenAI must be governed, not computed. This requires a shift toward tools that are adaptable to changing technical landscapes, clarify responsibilities across stakeholders, and support collaborative ethical reflection rather than static verification. This approach better serves the EU AI Act's requirements for human oversight than simple checklists, and ensures that fairness remains a continuous governance practice.},
+	section = {Extended abstract},
+}
+@InProceedings{bulck26,
+	title = {Who Gets the Better Story? An Exploration of Fairness in Explainable AI Narratives for Credit Scoring},
+	pages = {107-112},
+	author = {Van den Bulck, Wannes  and Goethals, Sofie and Martens, David},
+	openreview = {edGgS8JQGs},
+	abstract = {Post-hoc explanation methods like SHAP can technically justify credit decisions but are too technical for lay people to interpret, motivating AI-generated explanatory narratives (XAIN) that use large language models (LLMs) to translate SHAP artefacts into natural language. 
+While prior work has evaluated narrative faithfulness at the aggregate level, no study has examined whether quality differs systematically across demographic groups. We generate 204 SHAP-based narratives across six LLM providers for adversely classified instances from the German Credit dataset and break down faithfulness and feature coverage by applicant sex and age. We find substantial provider-level heterogeneity in narrative content, age- and sex-based disparities in which features are mentioned, and faithfulness differences across social groups. These exploratory findings underscore that XAIN cannot yet be deployed without structured fairness auditing and that further research is warranted.},
+	section = {Extended abstract},
+}
+@InProceedings{zipperling26,
+	title = {Data-Centric Algorithmic Fairness: A Systematic Review of Data-Level Interventions for Algorithmic Fairness},
+	pages = {113-135},
+	author = {Zipperling, Domenique and Deck, Luca and Jessat, Leo and K\"uhl, Niklas},
+	openreview = {GswPOC05cH},
+	abstract = {Algorithmic fairness has historically largely focused on model constraints and post-hoc adjustments to satisfy fairness metrics. However, such interventions often impose top-down fairness constraints that remain politically and legally contested and frequently encounter resistance from practitioners, e.g., due to feared accuracy-fairness trade-offs.
+In this paper, we investigate how the ``Data-Centric AI'' paradigm, i.e., improving performance through data-level interventions, can be applied toward algorithmic fairness metrics by systematically reviewing 79 papers and mapping the identified data-level fairness interventions to the two pillars of data-centric AI: data refinement (e.g., data cleaning and feature engineering) and data extension (e.g., targeted acquisition of instances and features). 
+Our findings reveal three patterns present in current research: First, extension strategies remain under-explored despite their potential to address systemic imbalances. 
+Second, most studies treat fairness metrics as a secondary or hindsight consideration with limited depth of empirical evaluation, which calls for more efforts focused on specific fairness objectives along the entire lifecycle.
+Third, we observe a lack of consistent terminology and guidance for the effective selection of techniques for practitioners. 
+We propose the data-centric algorithmic fairness paradigm to establish a unified language for data-level fairness interventions and highlight its potential to augment model-centric approaches for future applications.},
+	section = {Full paper},
+}
+@InProceedings{yaman26,
+	title = {CausalCERTIFAI: A Causality-Aware Framework for Counterfactual Explanations},
+	pages = {136-147},
+	author = {Yaman, Cankut and Aky\"uz, S\"ureyya},
+	openreview = {bMuJxNm9Lo},
+	abstract = {This study introduces CausalCERTIFAI, a causality-aware framework for generating counterfactual explanations in tabular machine learning models. The proposed approach integrates graph-based causal discovery with a constraint-aware genetic search process to produce counterfactuals that achieve a desired prediction while remaining consistent with learned causal relationships. Experiments are conducted on multiple classification datasets using decision trees, XGBoost, and LightGBM, comparing standard counterfactual generation with a causal constrained variant. Performance is evaluated in terms of robustness using NCERScore, alongside computational efficiency measured by runtime per instance. Results show that introducing causal constraints increases normalised counterfactual distance, reflecting more restricted but more realistic recourse, with stronger effects observed in higher-dimensional datasets.},
+	section = {Full paper},
+}
+@InProceedings{banerjee26,
+	title = {From Algorithmic Fairness to Evidentiary Reliability: Judicial Analytics under Article 6 ECHR},
+	pages = {148-151},
+	author = {Banerjee, Arjun Bhubaneshwar},
+	openreview = {2ilVJDiNSd},
+	abstract = {Data-driven analyses of judicial decision-making now range from traditional empirical legal studies based on inferential statistics to computational systems that deploy technologies like machine learning (ML) and natural language processing (NLP) to detect and predict patterns in judicial decisions. In debates relating to algorithmic fairness, these methods are usually evaluated through bias metrics, mitigation techniques, and predictive performance. This paper asks a normative legal question: under what conditions can such outputs function as legally reliable evidence in the assessment of judicial impartiality under Article 6(1) European Convention on Human Rights (ECHR? The paper departs from the argument that statistical validity and legal reliability are distinct standards. Statistical validity concerns model performance, robustness, and predictive success. Legal reliability, on the other hand, concerns whether an empirical claim can operate as a reason within adjudication. Situated at the level of the European Court of Human Rights (ECtHR), the paper reconstructs reliability not as a domestic admissibility rule but as a condition of epistemic justification. It shows that empirical or computational claims about judicial decision-making can inform the Article 6 inquiry only if they are grounded in ascertainable facts, intelligible to legal reasoning, open to adversarial scrutiny, and are methodologically credible. The paper develops this claim through a four-part framework of ascertainability, transparency and source accountability, methodological credibility, and explainability.},
+	section = {Extended abstract},
+}
+@InProceedings{jaoua26,
+	title = {Recommend Me First: How the Relative Ordering of Recommendations Can Lead to Unfair Outcomes for Content Creators},
+	pages = {152-158},
+	author = {Jaoua, Salima and Pagan, Nicol\`o and Hannak, Ancsa and Ionescu, Stefania},
+	openreview = {qFUv5FLR3M},
+	abstract = {Social media platforms provide millions of professional content creators with sustainable incomes. This makes recommender systems central to how visibility and revenue are distributed. As for job markets, it is therefore important to ensure these systems distribute exposure fairly. Prior work finds, however, that popularity-based recommendations are unlikely to yield even individually fair outcomes (i.e., where the resulting popularity of creators matches their quality of content) and calls for targeted solutions. To this end, our work introduces ordered pairwise comparison (OPC) as a cold-start fair exploration intervention within two time-steps that ensures equal exposure across creators both in number and in recommendation order. We prove analytically that OPC yields individually fair outcomes for all creators 
+after two time-steps. While subsequent recommendations inevitably reintroduce some bias, our simulations show that the fairness gains persist long-term with fair outcomes remaining substantially more likely than without the intervention. These gains come without any loss in user satisfaction. Altogether, our results suggest that parity in exposure counts during exploration is not enough to ensure fair outcomes for creators and that accounting for the relative order in which creators are presented is a promising intervention.},
+	section = {Extended abstract},
+}
+@InProceedings{berarducci26,
+	title = {FairMind: A Tool for Automatic Causal Fairness Analysis with LLM-Generated Reports},
+	pages = {159-164},
+	author = {Berarducci, Alessia and Rossetto, Eric and Antonucci, Alessandro and Zaffalon, Marco},
+	openreview = {WNrX7I781q},
+	abstract = {We introduce FairMind, a software tool designed to automate fairness analysis at the dataset level. Our approach builds on the assumptions of the \emph{standard fairness model} recently proposed by Ple\v{c}ko and Bareinboim, enabling a principled evaluation of fairness in terms of causal effects. The analysis relies on \emph{counterfactual} queries involving the target variable, potential mediators and confounders and different values of an input feature treated as \emph{protected}. Following the necessary data preprocessing, the tool performs closed-form computations of these effects. Large language models (LLMs) are then employed to generate detailed and interpretable reports on the fairness properties identified in the training data. Even in zero-shot settings, our approach offers substantial advantages over direct LLM-based analyses, particularly as the complexity of the data structures increases.},
+	section = {Extended abstract},
+}
+@InProceedings{yesmin26,
+	title = {Beyond the Black Box: Claim-Level Interpretability for Accountable Retrieval-Augmented Generation},
+	pages = {165-177},
+	author = {Yesmin, Farjana and Shirmin, Nusrat},
+	openreview = {buIQadWGAR},
+	abstract = {Retrieval-Augmented Generation (RAG) systems are increasingly deployed in high-stakes domains such as healthcare, legal aid, and public information services contexts where opacity in AI decision-support raises fundamental accountability and fairness concerns. Standard RAG pipelines operate as black boxes: retrieved documents influence outputs invisibly, preventing users, auditors, and regulators from verifying factual claims or detecting errors. This opacity constitutes a structural barrier to the auditability requirements embedded in fairness-oriented AI governance frameworks such as the EU AI Act. We introduce Interpretable Retrieval-Augmented Generation (I-RAG), a modular post-hoc framework that decomposes generated answers into atomic verifiable claims and bidirectionally links each claim to supporting evidence spans in source documents. Evaluated on 200 samples from Natural Questions and HotpotQA, I-RAG achieves 89.2% evidence support confidence on factual queries, 57.8% on complex multi-hop queries, and 98% overall claim coverage, with Attribution F1 of 0.693 outperforming sentence-level attribution baselines. All statistical comparisons against baselines are significant (p < 0.001 ). We additionally introduce NLI-based entailment scoring as a complementary attribution metric, addressing the inherent limitations of cosine-similarity-only evaluation. By making individual factual assertions traceable to their evidentiary basis, I-RAG provides a practical mechanism for transparency, human oversight, and accountability in AI-generated information systems.},
+	section = {Full paper},
+}
+@InProceedings{goethals26a,
+	title = {Towards Formalizing the Bias-Personalization Trade-off in Large Language Models},
+	pages = {178-183},
+	author = {Goethals, Sofie and Reusens, Manon},
+	openreview = {Xg17W105v6},
+	abstract = {Large Language Models (LLMs) are increasingly evaluated for fairness by examining whether their responses vary across
+demographic groups. However, not all response variation is inherently problematic: some differences reflect undesirable bias,
+whereas others represent appropriate personalization based on task-relevant user information. For instance, demographic cues
+may be relevant in response to a question about cervical cancer screening, but should not influence answers about pursuing a
+master's degree. This distinction remains largely understudied in existing LLM fairness research. In this ongoing work, we
+introduce novel metrics to analyze both desired personalization and undesired bias in LLM responses. We conduct an initial
+case study to analyze the current state of this trade-off within LLMs, with respect to the user's gender. This work serves as a
+first step toward formalizing the distinction between bias and personalization.},
+	section = {Extended abstract},
+}
+@InProceedings{romaniv26,
+	title = {Association-Based Fairness Measures under Class and Group Skew},
+	pages = {184-189},
+	author = {Romaniv, Dmytro and Brzezinski, Dariusz},
+	openreview = {gc1P7D3PNt},
+	abstract = {Fairness audits in binary classification assess the differences between protected and unprotected groups, using measures such as statistical parity, equal opportunity, predictive equality, and predictive parity. However, prior work on algorithmic fairness has shown that several of these measures exhibit substantial behaviour changes as class imbalance and protected-group ratios vary. This paper presents ongoing work on whether association-based measures can provide more stable fairness evaluation under three forms of skew: class imbalance, protected-group ratio, and stereotypical ratio. In this context, we adapt classical association coefficients to fairness tables and propose three new metrics: Fairness $\varphi$, Marginal Y Association, and Conditional Y Association. The first two measure independence between the prediction and the protected attribute, whereas the third aggregates within-label associations and is intended to reflect separation-style disparities. We study these metrics on synthetic confusion matrices and empirically on the Adult dataset. Preliminary results indicate that the association-based metrics, in particular Fairness $\varphi$ and Conditional Y Association, are less sensitive to extreme class imbalance and protected-group skew. The trade-off is that the definitions of these measures are harder to interpret on a conceptual level and, for the conditional variant, require smoothing. Nevertheless, these results indicate that association-based fairness metrics may be useful audit-oriented tools when comparing models across skewed datasets.},
+	section = {Extended abstract},
+}
+@InProceedings{longhin26,
+	title = {When Underrepresentation Matters: A Framework for Anticipating Fairness Risks},
+	pages = {190-195},
+	author = {Longhin, Diletta and Ceccon, Marina and Legast, Magali and Fabris, Alessandro and Calders, Toon and Susto, Gian Antonio},
+	openreview = {6cepReMUmC},
+	abstract = {Underrepresentation of minority groups in training data is widely regarded as a primary driver of unfair model behavior, motivating a broad range of data rebalancing interventions. However, recent work has begun to suggest that whether demographic imbalance actually translates into performance disparities may depend on a variety of dataset properties, which have so far been studied in isolation. In this work, we sketch a methodological pipeline to systematically study the factors that govern the impact of underrepresentation on fairness, with the goal of formulating a unified, empirically testable hypothesis that can be evaluated prior to model training. We additionally outline lightweight strategies for assessing these factors without the need to train a full model, making the approach practical for real-world data preparation workflows.},
+	section = {Extended abstract},
+}
+@InProceedings{wilms26,
+	title = {The Fairness-Performance Pareto Frontier: How to Design Less Discriminatory Algorithms?},
+	pages = {196-200},
+	author = {Wilms, Mieke and Heitz, Christoph},
+	openreview = {9lCAJxaQ1i},
+	abstract = {In our recent publication we derive an optimality theorem for binary data-based decision systems which characterizes the Pareto-optimal systems in the performance-fairness space, for a wide range of group fairness scores and arbitrary performance utility functions[11]. The theorem gives a theoretical boundary for the Pareto frontier that cannot be exceeded by any algorithm, and proves that these solutions are deterministic group-specific threshold rules. 
+  
+  We recapitulate the most important findings of this paper under the perspective of their legal implications. A decision system to be qualified as legally non-discriminatory needs to pass the so-called proportionality test which (among other questions) requires a proof that the goal of the decision maker could not have been achieved with less discriminatory means. Technically, this implies that the decision system is Pareto-optimal in the performance-fairness space, evaluated with a suitable fairness metric. We show that the optimality theorem of [11] helps to deal with the legal question of the proportionality test, but at the same time leads to puzzling questions with respect to the legal concepts of direct and indirect discrimination.},
+	section = {Extended abstract},
+}
+@InProceedings{jonge26,
+	title = {Fairness for Dating Apps: Mitigating Discrimination by Preventing Popularity Bias},
+	pages = {201-216},
+	author = {De Jonge, Tim and Hiemstra, Djoerd},
+	openreview = {h4ciF83fWl},
+	abstract = {Dating apps are important intermediaries in people finding romance, yet dating algorithms are likely to discriminate on basis of ethnicity. Dating apps cannot sufficiently measure or mitigate discrimination, as the GDPR prevents dating apps from accessing or processing ethnicity. In this work, we show that popularity bias can be a driver for discrimination, and that mitigating popularity bias can result in reduced algorithmic discrimination in content-based recommendation. Interventions on popularity bias appear more effective in content-based recommendation, with an appropriately chosen definition of popularity bias, and targeting indirect discrimination, rather than direct discrimination.},
+	section = {Full paper},
+}
+@InProceedings{ebling26,
+	title = {When LLMs Evaluate LLMs in Hiring: A Multi-Model Auditing Framework for Generative Preference Bias in AI-Assisted Recruitment},
+	pages = {217-222},
+	author = {Ebling, Michael Andreas and Ionescu, Stefania and Pagan, Nicol\`o},
+	openreview = {orhGHOpTAX},
+	abstract = {Job applicants increasingly use LLMs to write cover letters, while
+employers use LLMs to screen them. We study whether, in this all-AI
+setting, the \emph{choice of model} affects hiring outcomes
+independently of qualifications, using a multi-agent auditing
+framework (8 writer models, 6 evaluator models, 10 job descriptions,
+50 candidates per job). Three findings emerge: first, we identify a \emph{generative preference
+bias}: a consistent global ranking of writer models by evaluator
+acceptance, in which proprietary models are preferred and locally hosted
+models are systematically disadvantaged. 
+Self-preference bias (evaluators favouring their own outputs) is an additional perturbation,
+strongest among the top-ranked models, though not uniformly dominant across all evaluator-condition combinations. Second, our framework identifies which evaluator models are least sensitive to the writer model used,
+offering actionable guidance for fairer screening design. Third, writer
+model choice produces measurable rank displacement: in the most adverse
+pairing, approximately 2 out of 25 qualified candidates are filtered
+out purely due to model mismatch, not because of their credentials.},
+	section = {Extended abstract},
+}
+@InProceedings{famiani26,
+	title = {Assessing the Impact of Debiasing in Classification},
+	pages = {223-239},
+	author = {Famiani, Alessio and Pensa, Ruggero G.},
+	openreview = {qyWsXn0bAa},
+	abstract = {Fairness and Explainable Artificial Intelligence (XAI) have become more and more intertwined over the years. Their interplay gave birth to two open research areas: Explainable Fairness and Explanation Fairness. It is standard practice to audit machine learning models for bias and check if they behave correctly for every demographic group. However, a poorly investigated aspect concerns the transparency of the debiasing and the impact it has on the model's behaviour and output. How did the debiasing process affect decisions based on different demographics? Why has an instance belonging to a protected group received a negative outcome? Is it because the debiasing procedure has not been effective? In this paper, we address these research questions by defining a framework for analysing the behaviour of a mitigated model by explaining a classifier trained to discriminate between debiased instances and non-debiased ones. We show experimentally that, thanks to our framework, it is possible to draw useful insights on the debiasing process, and to inspect instances for which the debiased classifier behaves strangely or unexpectedly by looking at the feature importance of the discriminator.},
+	section = {Full paper},
+}
+@InProceedings{saridou26,
+	title = {Rethinking journalism in the era of algorithms: Fairness, ethics, and the European regulatory framework},
+	pages = {240-246},
+	author = {Saridou, Theodora},
+	openreview = {cu9gIpWiyQ},
+	abstract = {As the adoption of AI in journalism is transitioning from basic automation toward autonomous decision-making, newsroom tasks are transformed, while traditional ethical and regulatory frameworks are challenged. News visibility is significantly mediated by algorithmic systems, necessitating a proactive approach to embed core journalistic values into automated editorial practices. This paper proposes a theoretical framework for journalism based on the dimensions of visibility, pluralism, and editorial autonomy as integral parts of algorithmic fairness. Through an interdisciplinary approach, the framework is structured on ethical impact assessment, technical evaluation, regulation compliance, and editorial oversight. It includes assessment of algorithmic impact on journalism before deployment, translation of the journalistic values into system constraints, and evaluation of algorithmic bias in news representation. It also ensures compliance with EU regulations like the AI Act, DSA, EMFA, and GDPR, while maintaining continuous human oversight to protect editorial independence and freedom of expression.},
+	section = {Extended abstract},
+}
+@InProceedings{salgado-criado26,
+	title = {Against Peripheral Ethics Committees:  A Critique of the Strategic De-coupling of Ethics},
+	pages = {247-253},
+	author = {Salgado-Criado, Jes\'us},
+	openreview = {SwHwXif8At},
+	abstract = {This paper critically examines the efficacy of the ethics committee model as the primary mechanism for institutional ethical governance. While ostensibly designed to ensure moral deliberation, we posit that the placement of ethics committees outside the highest strategic and financial decision-making bodies---the board of directors--- or line management, renders them structurally incapable of addressing the most consequential moral challenges. The resulting phenomenon is a strategic de-coupling of ethics from power, leading to performative compliance rather than genuine moral integration. This is owed to the tension between the commitment to ethics and a broader and longer-standing industry commitments to meritocracy, technological solutionism, and market fundamentalism.},
+	section = {Extended abstract},
+}
+@InProceedings{pitsiorlas26,
+	title = {Sequential Fairness Auditing with Limited Output Access},
+	pages = {254-270},
+	author = {Pitsiorlas, Ioannis and Sourla, Martha-Vasiliki and Kountouris, Marios},
+	openreview = {Kox7xFpTd7},
+	abstract = {External evaluations are becoming increasingly central to the governance of AI systems. In practice, however, independent auditors often have limited access to deployed models and must rely on query-based interactions. Most existing fairness evaluation methods assume static datasets and fixed-sample statistical tests, making them poorly suited to real-world auditing scenarios in which evidence must be collected sequentially under query constraints. In this work, we formulate fairness auditing as a tolerance-aware sequential hypothesis-testing problem under limited model output access. We develop a sequential generalized likelihood-ratio framework that allows auditors to accumulate evidence from a finite audit pool and stop once sufficient support for compliance or violation has been obtained. The framework is instantiated for decision-based Statistical Parity and Equal Opportunity audits, and extended to score- and logit-based proxy audits when richer observables are available. Our results show that both the fairness metric and the level of model access significantly affect audit efficiency, and that the benefits of richer output information are not uniform across auditing settings. In particular, richer outputs can substantially reduce the number of queries required for some fairness metrics and operating regimes, while offering limited gains in near-threshold cases. This work provides a practical statistical framework for sequential fairness auditing under realistic deployment constraints.},
+	section = {Full paper},
+}
+@InProceedings{nana26,
+	title = {Sequential Cohort Selection under Uncertainty},
+	pages = {271-287},
+	author = {Nana, Hortence Phalonne Yiepnou and Dimitrakakis, Christos},
+	openreview = {KvGWkzkBC2},
+	abstract = {We study the problem of fair cohort selection under uncertainty, motivated by university admissions where applicant outcomes  are only partially observed. We consider both a one-shot setting, where a fixed policy is applied to a population, and a sequential setting, where policies are updated over time using data from previous admission years.
+We propose a policy optimization framework that combines probabilistic modeling of outcomes with policy gradient methods, supporting both logistic and neural network policies. In the sequential setting, the approach jointly updates the policy and the underlying models to adapt to evolving applicant populations.
+Experiments on a simulator grounded in real admission data show that adaptive policies substantially outperform static baselines in term of expected utility, especially under higher admission costs. Neural policies consistently achieve higher utility and adapt more effectively than simpler models, while maintaining favorable fairness properties over time. Our results demonstrate the importance of adaptivity and model expressiveness for decision-making under uncertainty.},
+	section = {Full paper},
+}
+@InProceedings{hobo26,
+	title = {CLEAR-NL: Language Complexity Feedback for Accessible Skills Languages},
+	pages = {288-305},
+	author = {Hobo, Eliza and Brand, Tom and De Boer, Maaike H.T. and Tooren, Marieke van den},
+	openreview = {3b4fwJnmiZ},
+	abstract = {Skills-based hiring is often presented as a more inclusive alternative to credential-based recruitment, particularly for people whose competences are not well captured by formal qualifications. Central to such approaches are skills languages: standardized descriptions of skills that enable person-job matching and transferability of workers across occupations. However, when skill descriptions are written in abstract or complex language, they can themselves become a barrier, undermining the inclusive aims of skills-based labour market initiatives. In this paper, we conceptualise language complexity in skill descriptions as a fairness and accessibility issue and propose CLEAR-NL: a Dutch-specific, modular approach to support expert maintainers in writing skills in a more accessible way. CLEAR-NL is designed based on four criteria, ensuring that the tool 1) fits in the application context, 2) gives the user feedback that enables informed action, 3) ensures the user is in charge, and 4) is proportional in terms of the size, opacity and risks. We validate CLEAR-NL in a user study with expert maintainers of a skills language, which investigates whether this feedback supports writing and revision decisions. Our findings show that modular feedback can support experts while also highlighting tensions between the design criteria and the practical application context. We discuss the implications of these findings for the design of responsible AI systems that support, rather than replace, human decision-making in fairness-sensitive domains},
+	section = {Full paper},
+}
+@InProceedings{sekwenz26,
+	title = {When Is Content ``AI-Generated Enough''? Labelling Synthetic Media under the Digital Services Act and the AI Act},
+	pages = {306-312},
+	author = {Sekwenz, Marie-Therese},
+	openreview = {vR5lUJbuA2},
+	abstract = {European platform and AI governance increasingly relies on transparency duties to address synthetic and manipulated media. Under the DSA, very large online platforms and search engines may use prominent markings and recipient-facing indication tools as systemic-risk mitigation measures. Under the AI Act, providers must support machine-readable marking, while deployers must disclose deepfakes and certain AI-generated or manipulated public-interest text, subject to statutory qualifications.
+
+This extended abstract examines when labelling is a meaningful regulatory response to synthetic media and when it risks becoming over-inclusive, under-inclusive, or ineffective. It argues that the central challenge is not only whether content should be labelled, but how legal thresholds, technical provenance systems, platform interfaces, and reporting practices determine when content is sufficiently generated, manipulated, or authentic-looking to trigger transparency obligations. Drawing on the emerging Article~50 AI Act implementation framework and a snapshot of the DSA Statement of Reasons database, the paper identifies four governance tensions: definitional ambiguity, interface and responsibility design, communicative effectiveness, and fairness and contestability. It conceptualises labelling as a socio-technical classification practice that distributes responsibility among AI providers, deployers, platforms, uploaders, and recipients.},
+	section = {Extended abstract},
+}
+@InProceedings{brenzke26,
+	title = {AI Tools in Algorithmic Management: Early Insights from Germany and Challenges for a fair and co-determined Design},
+	pages = {313-317},
+	author = {Brenzke, Martin and Rad\"untz, Thea},
+	openreview = {k83apfmS1G},
+	abstract = {The increasing use of artificial intelligence (AI)-based systems in the workplace and their consequences on workers' well-being is a central topic in the current surge of AI. Especially in the field of algorithmic management (AM), which involves the managing of workers based on or supported by algorithms. In this field the information and power imbalance between employees and employers can have a significant influence on the conditions of work. Moreover, it is often unclear what systems are actually being deployed, to what extent these include AI, and on what type of workers' data these systems operate. These questions are of utmost relevance to ensure a fair and co-determined design of AM processes.
+
+In our contribution, we report early insights from an ongoing qualitative interview study conducted in the German labor market. We carried out semi-structured expert interviews with three works council representatives from companies in the electrical industry, IT, and healthcare sectors.
+
+Our preliminary findings indicate that AI-based AM is currently mainly used in less critical areas of personnel management, while planned expansions into more sensitive domains are already emerging. At the same time, challenges related to transparency, data governance, and co-determination are already becoming visible in practice.
+
+These results underline the importance of a socio-technical perspective on AI in AM and highlight the need for further research on both the technical design and governance structures of such systems to support fair and employee-centered implementation.},
+	section = {Extended abstract},
+}
+@InProceedings{astante26,
+	title = {It Takes So Little to Change So Much: Investigating the Robustness of a Danish Voting Advice Algorithm},
+	pages = {318-334},
+	author = {Astante, Giovanni and Sinatra, Roberta and Sekara, Vedran},
+	openreview = {6FUDnyjamB},
+	abstract = {Voting Advice Applications (VAA) are tools designed to help voters compare political candidates on policy preferences prior to elections. VAAs are popular tools in European countries and in other countries with multi-party democratic systems. Through a freedom of information request we got access to the inner workings of a popular Danish VAA called the `Kandidattest' which is implemented by a major Danish news outlet and has been used for general, municipal, and European elections. Users and politicians from every political party answer the same online questionnaire and get matched based on the agreement percentage stemming from their answers. VAAs play a significant role in elections with 45% of surveyed voters reporting they followed their recommendations in the past Danish general election. However, the inner workings of VAAs have not been thoroughly evaluated until now. We find that the algorithm is not robust enough for users to trust the agreement percentages in the output, as small changes to the algorithm can lead to different results, potentially affecting election outcomes. We conduct an algorithmic audit of the Kandidattest's robustness, using simulated responses to investigate the tool's brittleness, with respect to minor adjustments of the algorithm's weight, and changes in the number of questions in the questionnaire.},
+	section = {Full paper},
+}
+@InProceedings{moussi26,
+	title = {WIDER-FAIR: An Annotated Version of the WIDER-FACE Dataset for Fairness Evaluation},
+	pages = {335-348},
+	author = {Moussi, Maxime and Ronval, Beno\^it and Nijssen, Siegfried and Schiltz, F\'elicien},
+	openreview = {Rvl2C17Plk},
+	abstract = {The deployment of face detection models in real-world applications raises important fairness concerns, as these systems may showcase performance disparities across demographic groups. A key obstacle to studying and mitigating such biases is the lack of face detection datasets with sensitive feature annotations. To address this gap, we introduce WIDER-FAIR, a new dataset built on the widely used WIDER-FACE benchmark, manually annotated with the perceived ethnicity and sex of each face. The dataset contains 16,256 images annotated across four ethnic groups: Asian, Black, Indian, and White, and two sex categories. We assess the quality and coherence of the annotations using face embeddings, a K-Nearest Neighbors classifier, and a t-SNE visualization, all of which support the consistency of the labeling process. As a demonstration of the dataset's potential, we train a YOLOv5 model and perform ablation studies on each sensitive feature. Among other findings, our experiments show that detection performance is notably lower for faces of Black individuals, and that excluding this group from training increases fairness disparity more than excluding any other ethnic group. These observations illustrate the value of demographically annotated datasets for understanding and evaluating bias in face detection models.},
+	section = {Full paper},
+}
+@InProceedings{multerer26,
+	title = {Counterfactual Methods for Detecting Unfairness in Anti-Money Laundering Algorithms},
+	pages = {349-364},
+	author = {Multerer, Lea and Inchingolo, Michele and Kletz, David and Cosma, Adrian and Antonucci, Alessandro and Gogova, Martina},
+	openreview = {oyEQzXBINz},
+	abstract = {The application of machine learning--based predictive algorithms to Anti-Money Laundering (AML) has grown rapidly, driven by the vast volume of financial transaction data available to banks. These algorithms are typically trained not only on transactional data but also on sensitive client information, which may raise fairness concerns. Despite this, AML detection systems remain largely underexplored from a fairness perspective, even though deeper analytical methods based on counterfactuals are now available. Such techniques enable the decomposition of the direct and indirect effects of potentially sensitive features on model predictions, thereby supporting the evaluation of whether their influence is acceptable from a fairness perspective. Closing this gap, we consider the synthetic IBM AMLSim transaction dataset and construct additional features of the country of an account and its average behaviour. This improves the predictive performance of diverse machine learning models, ranging from baseline decision trees to state-of-the-art graph neural networks. We assess the potential unfairness associated with these features through a counterfactual, path-specific effect analysis. This reveals that fairness violations tend to be more pronounced for models whose predictive performance benefits the most from the extended features. Such a finding highlights a concrete instance of the trade-off between predictive accuracy and fairness in AML applications, thus underscoring the urgency of a systematic fairness analysis in such critical domains.},
+	section = {Full paper},
+}
+@InProceedings{jarvers26,
+	title = {Governance-Driven Development: Embedding Regulatory Requirements in AI Development Workflows},
+	pages = {365-371},
+	author = {Jarvers, Simon and Papakyriakopoulos, Orestis},
+	openreview = {Y4IfKoh6BG},
+	abstract = {AI governance under the EU AI Act faces a structural misallocation of effort: management-based regulation, combined with the credence-good properties of governance outcomes, pushes resource-constrained organisations toward verification-facing documentation rather than the implementation it is meant to verify. We propose Governance-Driven Development (GDD), a framework that treats AI Act obligations and the requirements of supporting standards for safe AI development as formal specifications for software development work. GDD runs on two nested action cycles. A planning cycle scopes obligations against organisational context to produce specifications. An implementation cycle converts each specification into the artefact it specifies, with traceability back to the regulatory source. AI agents perform template-driven work; humans retain interpretation and accountability. The framework is in early implementation at an AI Startup, with unresolved load-bearing questions around knowledge base architecture and obligation decomposition.},
+	section = {Extended abstract},
+}
+@InProceedings{grenzebach26,
+	title = {Probing Protected Attributes within General-Purpose LLMs for Hiring},
+	pages = {372-385},
+	author = {Grenzebach, Jan and Rad\"untz, Thea},
+	openreview = {4aBhY4hVcQ},
+	abstract = {General-purpose Large Language Models (LLM) applications in human resource workflows are primarily driven by the need for
+objectivity and efficiency. However, a significant gap exists between enterprise-level AI and the consumer-grade ''black-box''
+services frequently utilized by small and medium-sized enterprises (SMEs), raising critical questions regarding algorithmic
+consistency and fairness. This paper utilizes the IN-OUT framework, a stimulus-response methodology derived from the
+cognitive sciences, to empirically audit the behavior of one popular LLM. We employ a 2 × 2 factorial design to analyze how
+the model responds to protected attributes (including gender, age, and nationality) across five varying stimulus volumes ranging
+from K = 16 to 12,000 curricula vitae (CVs).
+The findings reveal that while the model demonstrates acute sensitivity to objective professional suitability demographic bias
+does not operate as a static constant. Instead, bias manifests non-linearly as a context-dependent interaction effect. While the
+model exhibited robust neutrality at extreme low and high stimulus volumes (K = 16 and K = 12,000) significant gender and
+age-related structural breakdowns occurred at mid-range context densities (K = 3,000 and K = 6,000). In contrast, evaluations
+regarding nationality remained robustly equitable across all stimulus volumes.
+Furthermore, a multi-account audit across N= 11 independent user sessions confirms that while stochastic noise significantly
+shifts absolute scoring for candidate filtering baselines, the underlying discriminatory configurations remain structurally invariant
+(r > 0.99) even at the smallest sample sizes. These results suggest that absolute score thresholds for candidate filtering are
+highly unreliable and that latent biases can trigger unpredictably as context windows approach saturation limits. The study
+concludes with practical implications for digital governance and the necessity of high-volume algorithmic stress tests to ensure
+non-discriminatory HR selection under the regulatory frameworks of the EU AI Act.},
+	section = {Full paper},
+}
+@InProceedings{sargeant26,
+	title = {Unequal Uncertainty: Rethinking Algorithmic Interventions for Mitigating Discrimination from AI},
+	pages = {386-408},
+	author = {Sargeant, Holli and Jorgensen, Mackenzie and Shah, Arina and Goring, Sam and Weller, Adrian and Bhatt, Umang},
+	openreview = {7m3te5Z9aO},
+	abstract = {Uncertainty in artificial intelligence (AI) predictions raises pressing legal and ethical questions for AI-assisted decision‑making. 
+This article examines two uncertainty-based algorithmic interventions that act as guardrails for human-AI interaction: selective abstention, which withholds high-uncertainty predictions from human decision-makers, and selective friction, which presents such predictions together with salient warnings about the model's uncertainty. Prior work suggests that uncertainty-based abstention can exacerbate disparities where under-represented groups are more likely to receive uncertain predictions. We provide, to our knowledge, the first doctrinal analysis of uncertainty-based algorithmic interventions under laws from the United Kingdom and examine their consequences through two AI-assisted case studies: consumer credit and risk of reoffending. We show that the use of uncertainty thresholds, though formally neutral, can generate discriminatory effects. We argue that both interventions pose risks of unlawful discrimination, but that selective friction is legally preferable. It preserves access to the prediction and is more likely to satisfy proportionality under the Equality Act 2010. Whether selective friction also improves decision quality in practice is uncertain. We identify conditions under which it may improve or worsen decision quality.},
+	section = {Full paper},
+}
+@InProceedings{zliobaite26,
+	title = {Fairness interventions and case shift},
+	pages = {409-427},
+	author = {Zliobaite, Indre},
+	openreview = {gky5c5Wfcg},
+	abstract = {Screening applications, including welfare fraud detection, credit scoring, and criminal risk assessment, are among the most high-stakes settings for algorithmic fairness. They share a structural property. Because outcome labels are available only for cases selected by a prior screening process, the training distribution differs fundamentally from the deployment population. Fairness interventions are calibrated on such training data but must hold for the population. Here, we analyze the implications of this mismatch for the effectiveness of fairness interventions and identify two failure modes. The first is the non-identifiability of fairness measures. Most standard fairness measures require confusion matrix entries that are structurally absent under selective labeling and cannot be estimated regardless of sample size. The second is disparity reversal. Selective labeling distorts class prevalence in the training corpus relative to the population. When the model is additionally differentially accurate across demographic groups, a fairness intervention that achieves parity at the training prevalence can reverse the disparity at deployment. We derive conditions under which reversal occurs and show that non-identifiability prevents its detection on available data. We validate both failure modes against a documented case of welfare fraud detection by the City of Amsterdam in which an extensive fairness intervention corrected for disparity on the evaluation corpus but reversed it in a live pilot. We recommend that only identified measures should guide fairness interventions, that differential accuracy should be minimized or explicitly accounted for, and that the prevalence mismatch between the corpus and the deployment population should be corrected before optimizing models for fairness.},
+	section = {Full paper},
+}
+@InProceedings{young26,
+	title = {Oracle Externality in Prediction Markets Creates Adversarial Incentives Against Public Infrastructure},
+	pages = {428-434},
+	author = {Young, Robin and Chang, Che-Yuan},
+	openreview = {fyPPajex6N},
+	abstract = {Prediction markets on real world events resolve based on data produced by external oracle systems, frequently from public infrastructure maintained under non-adversarial threat models. The financial incentives these markets create for specific outcomes transform such infrastructure into attack surfaces whose hardening costs fall on operators and users outside the market. We describe the April 2026 manipulation of M\'et\'eo-France sensor data for Polymarket weather contracts as an illustrative case of this pattern, situate it within existing discussions of prediction market harms, and argue that the mechanism represents a distinct class of externality not yet addressed by either the mainstream prediction market literature or the cryptocurrency-focused oracle security literature. We sketch implications for regulatory design and identify directions for further analysis. The paper articulates the mechanism rather than its formal resolution, as we treat this as an opening argument for a problem that we argue deserves dedicated attention.},
+	section = {Extended abstract},
+}
+@InProceedings{goethals26b,
+	title = {Resource-constrained Fairness},
+	pages = {435-452},
+	author = {Goethals, Sofie and Delaney, Eoin D. and Mittelstadt, Brent and Russell, Chris},
+	openreview = {tf5Qpsd86e},
+	abstract = {Access to resources strongly constrains the decisions we make. While we might wish to offer every student a scholarship, or schedule every patient for follow-up meetings with a specialist, limited resources make this infeasible. 
+When deploying machine learning systems, these resource constraints are typically enforced by adjusting the classifier threshold.
+However, these finite resource limitations are disregarded by most existing tools for fair machine learning, which do not allow for the specification of resource limitations and do not remain fair when varying thresholds. This makes them ill-suited for real-world deployment.
+Our research introduces the concept of "resource-constrained fairness" and quantifies the cost of fairness within these constraints. We demonstrate that the level of available resources significantly influences this cost, a factor overlooked in prior evaluations.},
+	section = {Full paper},
+}
+@InProceedings{autischer26,
+	title = {Towards EU AI Act Compliance: Self-Certification and Fairness Alignment for Facial Emotion Recognition},
+	pages = {453-459},
+	author = {Autischer, Gregor and Waxnegger, Kerstin and Kowald, Dominik},
+	openreview = {irSUW0rbBs},
+	abstract = {The European Union's AI Act establishes comprehensive requirements for high-risk AI systems, yet the harmonized standards granting presumption of conformity remain under development. We investigate the practical application of the Fraunhofer AI Assessment Catalogue as a self-certification framework by conducting a complete self-certification cycle of an AI-based facial emotion recognition system. Starting from a baseline model with deficiencies including inadequate fairness alignment and high prediction uncertainty, we document an enhancement process guided by certification requirements. The enhanced system achieves improved accuracy, higher prediction confidence and comprehensive fairness across demographic groups, successfully satisfying certification criteria for the reliability and fairness dimensions. We find that the certification framework provides substantial value as a proactive development tool, driving concrete technical improvements. However, fundamental gaps separate structured self-certification from legal compliance: harmonized European standards are not yet fully available and assessment catalogues cannot substitute for mandatory conformity assessment procedures. These findings establish the Fraunhofer AI Assessment Catalogue as a valuable preparatory tool that complements rather than replaces formal AI Act compliance requirements.},
+	section = {Extended abstract},
+}
