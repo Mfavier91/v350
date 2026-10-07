@@ -4,9 +4,9 @@ shortname: ECAF
 sections:
 - name: Preface
   title: Preface
-- name: Full Papers
+- name: Full Paper
   title: Full Papers
-- name: Extended Abstracts
+- name: Extended Abstract
   title: Extended Abstracts
 volume: '350'
 year: '2026'
